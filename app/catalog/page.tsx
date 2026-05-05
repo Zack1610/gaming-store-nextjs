@@ -3,6 +3,7 @@ import { db } from '@/lib/db';
 import Link from 'next/link';
 
 export default async function CatalogPage() {
+    await new Promise(resolve => setTimeout(resolve, 3000));
   // 1. Consulta a la base de datos zaming-store
   const [rows] = await db.query('SELECT * FROM juegos');
   const juegos = rows as any[];

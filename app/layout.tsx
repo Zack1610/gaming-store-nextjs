@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import Link from "next/link"; // Importante para la navegación rápida
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} antialiased bg-slate-900 text-white`}>
+      {/* Añadimos flex y min-h-screen para que el footer no "flote" a mitad de pantalla */}
+      <body className={`${geistSans.variable} antialiased bg-slate-900 text-white flex flex-col min-h-screen`}>
+        
         {/* --- NAVBAR GLOBAL --- */}
         <nav className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -39,7 +41,7 @@ export default function RootLayout({
               </Link>
             </div>
 
-            {/* Botón de Perfil / Carrito (Estético por ahora) */}
+            {/* Carrito Estético */}
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:border-blue-500 cursor-pointer transition-all">
                 🛒
@@ -48,8 +50,31 @@ export default function RootLayout({
           </div>
         </nav>
 
-        {/* Contenido de cada página */}
-        {children}
+        {/* Contenido de cada página - flex-grow empuja al footer hacia abajo */}
+        <div className="flex-grow">
+          {children}
+        </div>
+
+        {/* --- FOOTER GLOBAL --- */}
+        <footer className="border-t border-slate-800 bg-slate-900 py-12">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+              <p className="text-xl font-black tracking-tighter">
+                ZAMING <span className="text-blue-500">STORE</span>
+              </p>
+              <p className="text-slate-500 text-sm mt-2">
+                © 2026 Zack - Proyecto DAM 1. Todos los derechos reservados.
+              </p>
+            </div>
+            
+            <div className="flex gap-6 text-slate-400 text-sm font-bold uppercase tracking-widest">
+              <a href="https://github.com/Zack1610" target="_blank" className="hover:text-blue-500 transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </footer>
+        
       </body>
     </html>
   );
