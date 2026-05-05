@@ -1,65 +1,55 @@
-import Image from "next/image";
+import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-slate-900">
+      
+      {/* Efecto de Luces de fondo (Gaming Vibes) */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px]" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/10 blur-[120px]" />
+
+      <div className="relative z-10 text-center px-6">
+        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 uppercase">
+          Eleva tu <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+            Experiencia
+          </span>
+        </h1>
+        
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed font-medium">
+          Bienvenido a <span className="text-white font-bold">Zaming Store</span>. 
+          Explora nuestra selección exclusiva de títulos para PS5, Switch, Xbox y PC con la mejor tecnología.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="/catalog" 
+            className="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-600/20 uppercase tracking-widest"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Explorar Catálogo
+          </Link>
+          
+          <button className="px-10 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-full transition-all border border-slate-700 uppercase tracking-widest">
+            Saber más
+          </button>
         </div>
-      </main>
-    </div>
+
+        {/* Stats rápidos (Estético) */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-slate-800 pt-10">
+          <div>
+            <p className="text-3xl font-black text-white">+50</p>
+            <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Juegos</p>
+          </div>
+          <div>
+            <p className="text-3xl font-black text-white">5 min</p>
+            <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Entrega</p>
+          </div>
+          <div className="hidden md:block">
+            <p className="text-3xl font-black text-white">100%</p>
+            <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Seguro</p>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
