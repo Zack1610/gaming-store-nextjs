@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { db } from '@/lib/db';
+import Link from 'next/link';
 
 export default async function CatalogPage() {
   // 1. Consulta a la base de datos zaming-store
@@ -42,9 +43,14 @@ export default async function CatalogPage() {
                 <p className="text-3xl font-black text-blue-400">
                   {juego.precio}€
                 </p>
-                <button className="bg-white text-black px-5 py-2 rounded-full font-bold text-sm hover:bg-blue-500 hover:text-white transition-colors">
+                
+                <Link 
+  href={`/catalog/${juego.id}`}
+  className="bg-white text-black px-5 py-2 rounded-full font-bold text-sm hover:bg-blue-500 hover:text-white transition-colors"
+>
                   DETALLES
-                </button>
+                </Link>
+                
               </div>
             </div>
           </div>
