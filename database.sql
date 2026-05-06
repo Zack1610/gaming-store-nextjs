@@ -13,6 +13,24 @@ CREATE TABLE IF NOT EXISTS `juegos` (
 
 -- 3. Insertar tus primeros juegos para probar
 INSERT INTO `juegos` (`titulo`, `precio`, `plataforma`, `imagen_url`) VALUES 
-('Elden Ring', 59.99, 'PS5', 'public/juegos/elden-ring.jpg'),
-('Zelda: Tears of the Kingdom', 69.99, 'Switch', 'public/juegos/kingdom.jpg'),
-('Mouse P.I. for hire', 0.00, 'XBOX', 'public/juegos/mouse-xbox.jpg');
+('Elden Ring', 59.99, 'PS5', '/juegos/elden-ring.jpg'),
+('Zelda: Tears of the Kingdom', 69.99, 'Switch', '/juegos/kingdom.jpg'),
+('Mouse P.I. for hire', 29.99, 'XBOX', '/juegos/mouse-xbox.jpg'),
+('Cuphead', 19.99, 'Switch', '/juegos/cuphead.jpg'),
+('Zelda: Breath of the Wild', 59.99, 'Switch', '/juegos/wild.jpg'),
+('Black Myth: Wukong', 59.99, 'PS5', '/juegos/wukong.jpg'),
+('Ill', 59.99, 'XBOX', '/juegos/ill.jpg'),
+('Mortal Kombat 11', 39.99, 'PS5', '/juegos/mortal.jpg'),
+('The witcher 3', 59.99, 'PS5', '/juegos/witcher.jpg'),
+('Super Mario Galaxy 1 + 2', 59.99, 'Switch', '/juegos/galaxy.jpg'),
+('Hollow Knight', 19.99, 'Switch', '/juegos/hollow.jpg'),
+('Forza Horizon 5', 59.99, 'XBOX', '/juegos/elden.jpg'),
+('Spider-Man 2', 59.99, 'PS5', '/juegos/spiderman.jpg'),
+('Minecraft', 29.99, 'PS5', '/juegos/minecraft.jpg'),
+('Pokemon Purpura', 59.99, 'Switch', '/juegos/violeta.jpg'),
+('Rayman Legends', 39.99, 'XBOX', '/juegos/rayman.jpg'),
+('resident Evil 4', 49.99, 'PS5', '/juegos/resident.jpg'),
+('Mario Odyssey', 59.99, 'Switch', '/juegos/mario.jpg'),
+('GTA V', 49.99, 'XBOX', '/juegos/gta.jpg'),
+('Sonic Frontiers', 49.99, 'XBOX', '/juegos/sonic.jpg'),
+('Halo Infinite', 29.99, 'XBOX', '/juegos/halo.jpg');

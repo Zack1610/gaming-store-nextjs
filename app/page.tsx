@@ -18,7 +18,7 @@ export default function HomePage() {
         
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed font-medium">
           Bienvenido a <span className="text-white font-bold">Zaming Store</span>. 
-          Explora nuestra selección exclusiva de títulos para PS5, Switch, Xbox y PC con la mejor tecnología.
+          Explora nuestra selección exclusiva de títulos para PS5, Switch, Xbox One/X con la mejor tecnología.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -29,15 +29,12 @@ export default function HomePage() {
             Explorar Catálogo
           </Link>
           
-          <button className="px-10 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-full transition-all border border-slate-700 uppercase tracking-widest">
-            Saber más
-          </button>
         </div>
 
         {/* Stats rápidos (Estético) */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-slate-800 pt-10">
           <div>
-            <p className="text-3xl font-black text-white">+50</p>
+            <p className="text-3xl font-black text-white">+20</p>
             <p className="text-slate-500 text-sm uppercase font-bold tracking-widest">Juegos</p>
           </div>
           <div>

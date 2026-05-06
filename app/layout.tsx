@@ -40,13 +40,6 @@ export default function RootLayout({
                 Catálogo
               </Link>
             </div>
-
-            {/* Carrito Estético */}
-            <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center hover:border-blue-500 cursor-pointer transition-all">
-                🛒
-              </div>
-            </div>
           </div>
         </nav>
 
@@ -68,8 +61,13 @@ export default function RootLayout({
             </div>
             
             <div className="flex gap-6 text-slate-400 text-sm font-bold uppercase tracking-widest">
-              <a href="https://github.com/Zack1610" target="_blank" className="hover:text-blue-500 transition-colors">
-                GitHub
+              <a 
+            href="https://github.com/Zack1610" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-blue-500 transition-colors"
+>
+              GitHub
               </a>
             </div>
           </div>
