@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS `zaming-store`;
+
 -- 1. Crear la base de datos (si no existe)
 CREATE DATABASE IF NOT EXISTS `zaming-store`;
 USE `zaming-store`;
@@ -9,6 +11,14 @@ CREATE TABLE IF NOT EXISTS `juegos` (
   `precio` DECIMAL(10, 2) NOT NULL,
   `plataforma` VARCHAR(50) NOT NULL,
   `imagen_url` VARCHAR(255) DEFAULT NULL
+);
+
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_cliente VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    metodo_pago VARCHAR(50) NOT NULL,
+    fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- 3. Insertar tus primeros juegos para probar
